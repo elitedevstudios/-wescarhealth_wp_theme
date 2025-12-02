@@ -84,7 +84,7 @@ get_header();
 					</a>
 				</div>
 				<div class="service-detail__image animate-on-scroll" data-delay="200">
-					<img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&h=500&fit=crop" alt="<?php esc_attr_e( 'Surgical clearance consultation', 'wescarhealth' ); ?>">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/surgical-clearance.jpg' ); ?>" alt="<?php esc_attr_e( 'Surgical clearance consultation', 'wescarhealth' ); ?>">
 				</div>
 			</div>
 		</div>
@@ -130,7 +130,7 @@ get_header();
 					</a>
 				</div>
 				<div class="service-detail__image animate-on-scroll" data-delay="200">
-					<img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=500&fit=crop" alt="<?php esc_attr_e( 'Hormone therapy consultation', 'wescarhealth' ); ?>">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/hormone-therapy.jpg' ); ?>" alt="<?php esc_attr_e( 'Hormone therapy consultation', 'wescarhealth' ); ?>">
 				</div>
 			</div>
 		</div>
@@ -176,7 +176,7 @@ get_header();
 					</a>
 				</div>
 				<div class="service-detail__image animate-on-scroll" data-delay="200">
-					<img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=500&fit=crop" alt="<?php esc_attr_e( 'Urgent care telehealth visit', 'wescarhealth' ); ?>">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/telehealth-visit.jpg' ); ?>" alt="<?php esc_attr_e( 'Urgent care telehealth visit', 'wescarhealth' ); ?>">
 				</div>
 			</div>
 		</div>
@@ -222,7 +222,7 @@ get_header();
 					</a>
 				</div>
 				<div class="service-detail__image animate-on-scroll" data-delay="200">
-					<img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=500&fit=crop" alt="<?php esc_attr_e( 'Confidential health consultation', 'wescarhealth' ); ?>">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/confidential-health-consultation.jpg' ); ?>" alt="<?php esc_attr_e( 'Confidential health consultation', 'wescarhealth' ); ?>">
 				</div>
 			</div>
 		</div>

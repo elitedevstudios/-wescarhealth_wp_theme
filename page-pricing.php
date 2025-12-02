@@ -51,7 +51,7 @@ get_header();
 					</div>
 					<div class="pricing-card__price">
 						<span class="pricing-card__currency">$</span>
-						<span class="pricing-card__amount">XXX</span>
+						<span class="pricing-card__amount">149</span>
 					</div>
 					<ul class="pricing-card__features">
 						<li>
@@ -91,7 +91,7 @@ get_header();
 					</div>
 					<div class="pricing-card__price">
 						<span class="pricing-card__currency">$</span>
-						<span class="pricing-card__amount">XXX</span>
+						<span class="pricing-card__amount">199</span>
 					</div>
 					<ul class="pricing-card__features">
 						<li>
@@ -134,7 +134,7 @@ get_header();
 					</div>
 					<div class="pricing-card__price">
 						<span class="pricing-card__currency">$</span>
-						<span class="pricing-card__amount">XXX</span>
+						<span class="pricing-card__amount">129</span>
 					</div>
 					<ul class="pricing-card__features">
 						<li>
@@ -186,7 +186,7 @@ get_header();
 					</div>
 					<div class="pricing-card__price">
 						<span class="pricing-card__currency">$</span>
-						<span class="pricing-card__amount">XXX</span>
+						<span class="pricing-card__amount">249</span>
 					</div>
 					<ul class="pricing-card__features">
 						<li>
@@ -207,7 +207,7 @@ get_header();
 						</li>
 					</ul>
 					<div class="pricing-card__note">
-						<strong><?php esc_html_e( 'Follow-up visits:', 'wescarhealth' ); ?></strong> $XXX
+						<strong><?php esc_html_e( 'Follow-up visits:', 'wescarhealth' ); ?></strong> $149
 					</div>
 					<a href="https://www.tebra.com/" class="button button--primary" target="_blank" rel="noopener noreferrer">
 						<span class="button__text"><?php esc_html_e( 'Book Consultation', 'wescarhealth' ); ?></span>
@@ -228,7 +228,7 @@ get_header();
 					</div>
 					<div class="pricing-card__price">
 						<span class="pricing-card__currency">$</span>
-						<span class="pricing-card__amount">XXX</span>
+						<span class="pricing-card__amount">199</span>
 					</div>
 					<ul class="pricing-card__features">
 						<li>
@@ -249,7 +249,7 @@ get_header();
 						</li>
 					</ul>
 					<div class="pricing-card__note">
-						<strong><?php esc_html_e( 'Follow-up visits:', 'wescarhealth' ); ?></strong> $XXX
+						<strong><?php esc_html_e( 'Follow-up visits:', 'wescarhealth' ); ?></strong> $99
 					</div>
 					<a href="https://www.tebra.com/" class="button button--primary" target="_blank" rel="noopener noreferrer">
 						<span class="button__text"><?php esc_html_e( 'Book Consultation', 'wescarhealth' ); ?></span>
@@ -283,7 +283,7 @@ get_header();
 					</div>
 					<div class="pricing-card__price">
 						<span class="pricing-card__currency">$</span>
-						<span class="pricing-card__amount">XXX</span>
+						<span class="pricing-card__amount">75</span>
 					</div>
 					<ul class="pricing-card__features">
 						<li>
@@ -322,7 +322,7 @@ get_header();
 					</div>
 					<div class="pricing-card__price">
 						<span class="pricing-card__currency">$</span>
-						<span class="pricing-card__amount">XXX</span>
+						<span class="pricing-card__amount">49</span>
 					</div>
 					<ul class="pricing-card__features">
 						<li>
@@ -374,7 +374,7 @@ get_header();
 					</div>
 					<div class="pricing-card__price">
 						<span class="pricing-card__currency">$</span>
-						<span class="pricing-card__amount">XXX</span>
+						<span class="pricing-card__amount">89</span>
 					</div>
 					<ul class="pricing-card__features">
 						<li>
@@ -416,7 +416,7 @@ get_header();
 					</div>
 					<div class="pricing-card__price">
 						<span class="pricing-card__currency">$</span>
-						<span class="pricing-card__amount">XXX</span>
+						<span class="pricing-card__amount">149</span>
 					</div>
 					<ul class="pricing-card__features">
 						<li>
@@ -437,7 +437,7 @@ get_header();
 						</li>
 					</ul>
 					<div class="pricing-card__note">
-						<strong><?php esc_html_e( 'Follow-up visits:', 'wescarhealth' ); ?></strong> $XXX
+						<strong><?php esc_html_e( 'Follow-up visits:', 'wescarhealth' ); ?></strong> $79
 					</div>
 					<a href="https://www.tebra.com/" class="button button--primary" target="_blank" rel="noopener noreferrer">
 						<span class="button__text"><?php esc_html_e( 'Book Consultation', 'wescarhealth' ); ?></span>

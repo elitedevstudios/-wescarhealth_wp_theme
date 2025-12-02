@@ -94,60 +94,9 @@ get_header();
 					</div>
 				</div>
 
-				<!-- Contact Form -->
-				<div class="contact-form-wrapper animate-on-scroll" data-delay="200">
-					<div class="contact-form">
-						<h2 class="contact-form__title"><?php esc_html_e( 'Send Us a Message', 'wescarhealth' ); ?></h2>
-						<p class="contact-form__description"><?php esc_html_e( 'For general inquiries only. For medical concerns, please book an appointment.', 'wescarhealth' ); ?></p>
-						
-						<form class="contact-form__form" action="#" method="post">
-							<div class="contact-form__row">
-								<div class="contact-form__field">
-									<label for="first-name"><?php esc_html_e( 'First Name', 'wescarhealth' ); ?> <span>*</span></label>
-									<input type="text" id="first-name" name="first_name" required>
-								</div>
-								<div class="contact-form__field">
-									<label for="last-name"><?php esc_html_e( 'Last Name', 'wescarhealth' ); ?> <span>*</span></label>
-									<input type="text" id="last-name" name="last_name" required>
-								</div>
-							</div>
-							<div class="contact-form__row">
-								<div class="contact-form__field">
-									<label for="email"><?php esc_html_e( 'Email', 'wescarhealth' ); ?> <span>*</span></label>
-									<input type="email" id="email" name="email" required>
-								</div>
-								<div class="contact-form__field">
-									<label for="phone"><?php esc_html_e( 'Phone', 'wescarhealth' ); ?></label>
-									<input type="tel" id="phone" name="phone">
-								</div>
-							</div>
-							<div class="contact-form__field">
-								<label for="subject"><?php esc_html_e( 'Subject', 'wescarhealth' ); ?> <span>*</span></label>
-								<select id="subject" name="subject" required>
-									<option value=""><?php esc_html_e( 'Select a subject', 'wescarhealth' ); ?></option>
-									<option value="general"><?php esc_html_e( 'General Inquiry', 'wescarhealth' ); ?></option>
-									<option value="services"><?php esc_html_e( 'Services Question', 'wescarhealth' ); ?></option>
-									<option value="pricing"><?php esc_html_e( 'Pricing Question', 'wescarhealth' ); ?></option>
-									<option value="technical"><?php esc_html_e( 'Technical Support', 'wescarhealth' ); ?></option>
-									<option value="other"><?php esc_html_e( 'Other', 'wescarhealth' ); ?></option>
-								</select>
-							</div>
-							<div class="contact-form__field">
-								<label for="message"><?php esc_html_e( 'Message', 'wescarhealth' ); ?> <span>*</span></label>
-								<textarea id="message" name="message" rows="5" required></textarea>
-							</div>
-							<div class="contact-form__notice">
-								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-								<span><?php esc_html_e( 'Please do not include sensitive medical information in this form.', 'wescarhealth' ); ?></span>
-							</div>
-							<button type="submit" class="button button--primary">
-								<span class="button__text"><?php esc_html_e( 'Send Message', 'wescarhealth' ); ?></span>
-								<span class="button__arrow">
-									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-								</span>
-							</button>
-						</form>
-					</div>
+				<!-- Contact Image -->
+				<div class="contact-image animate-on-scroll" data-delay="200">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/contact-doctor.jpg' ); ?>" alt="<?php esc_attr_e( 'Healthcare professional ready to help', 'wescarhealth' ); ?>">
 				</div>
 			</div>
 		</div>

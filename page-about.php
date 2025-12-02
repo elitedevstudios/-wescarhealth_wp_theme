@@ -31,7 +31,7 @@ get_header();
 		<div class="container">
 			<div class="about-grid">
 				<div class="about-grid__image animate-on-scroll">
-					<img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=500&fit=crop" alt="<?php esc_attr_e( 'Healthcare professional', 'wescarhealth' ); ?>">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/mission-team.jpg' ); ?>" alt="<?php esc_attr_e( 'Diverse medical team working together', 'wescarhealth' ); ?>">
 				</div>
 				<div class="about-grid__content animate-on-scroll" data-delay="200">
 					<h2 class="about-grid__title"><?php esc_html_e( 'Our Mission', 'wescarhealth' ); ?></h2>
@@ -82,32 +82,8 @@ get_header();
 		</div>
 	</section>
 
-	<!-- Team Section -->
-	<section class="section">
-		<div class="container">
-			<div class="section__header animate-on-scroll">
-				<span class="section__badge"><?php esc_html_e( 'Our Team', 'wescarhealth' ); ?></span>
-				<h2 class="section__title"><?php esc_html_e( 'Meet Your Providers', 'wescarhealth' ); ?></h2>
-				<p class="section__description"><?php esc_html_e( 'Our team of experienced healthcare professionals is dedicated to your well-being.', 'wescarhealth' ); ?></p>
-			</div>
-			<div class="team-grid">
-				<div class="team-card animate-on-scroll" data-delay="100">
-					<div class="team-card__image">
-						<img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop&crop=face" alt="<?php esc_attr_e( 'Provider', 'wescarhealth' ); ?>">
-					</div>
-					<div class="team-card__content">
-						<h3 class="team-card__name"><?php esc_html_e( 'Provider Name', 'wescarhealth' ); ?></h3>
-						<p class="team-card__title"><?php esc_html_e( 'Board-Certified Nurse Practitioner', 'wescarhealth' ); ?></p>
-						<p class="team-card__bio"><?php esc_html_e( 'With over 15 years of clinical experience, specializing in primary care, surgical clearance, and hormone therapy.', 'wescarhealth' ); ?></p>
-					</div>
-				</div>
-				<!-- Add more team members as needed -->
-			</div>
-		</div>
-	</section>
-
 	<!-- Why Choose Us -->
-	<section class="section section--gray">
+	<section class="section">
 		<div class="container">
 			<div class="section__header animate-on-scroll">
 				<span class="section__badge"><?php esc_html_e( 'Why WesCarr Health', 'wescarhealth' ); ?></span>

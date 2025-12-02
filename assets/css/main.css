@@ -93,11 +93,19 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	gap: var(--spacing-6, 1.5rem);
-	padding-block: var(--spacing-5, 1.25rem);
+	gap: var(--spacing-4, 1rem);
+	padding-block: var(--spacing-4, 1rem);
 	max-inline-size: 1400px;
 	margin-inline: auto;
-	padding-inline: var(--spacing-6, 1.5rem);
+	padding-inline: var(--spacing-4, 1rem);
+}
+
+@media (min-width: 48rem) {
+	.site-header__container {
+		gap: var(--spacing-6, 1.5rem);
+		padding-block: var(--spacing-5, 1.25rem);
+		padding-inline: var(--spacing-6, 1.5rem);
+	}
 }
 
 .site-header.is-scrolled .site-header__container {
@@ -177,7 +185,38 @@
 .site-header__actions {
 	display: flex;
 	align-items: center;
-	gap: var(--spacing-4, 1rem);
+	gap: var(--spacing-2, 0.5rem);
+}
+
+@media (min-width: 48rem) {
+	.site-header__actions {
+		gap: var(--spacing-4, 1rem);
+	}
+}
+
+/* Header Book Now button - mobile adjustments */
+.site-header__actions .button--primary {
+	padding-block: var(--spacing-2, 0.5rem);
+	padding-inline: var(--spacing-3, 0.75rem);
+	font-size: 0.8125rem;
+}
+
+.site-header__actions .button--primary .button__arrow {
+	inline-size: 24px;
+	block-size: 24px;
+}
+
+@media (min-width: 48rem) {
+	.site-header__actions .button--primary {
+		padding-block: var(--spacing-3, 0.75rem);
+		padding-inline: var(--spacing-5, 1.25rem);
+		font-size: 0.875rem;
+	}
+
+	.site-header__actions .button--primary .button__arrow {
+		inline-size: 28px;
+		block-size: 28px;
+	}
 }
 
 .site-header__phone {
@@ -309,6 +348,19 @@
 	border-block-end: 1px solid var(--color-gray-100, #e2e8f0);
 }
 
+.site-header__mobile-cta {
+	padding: var(--spacing-4, 1rem);
+}
+
+.site-header__mobile-cta .button {
+	display: flex;
+	justify-content: center;
+	inline-size: 100%;
+	padding-block: var(--spacing-4, 1rem);
+	font-size: 1rem;
+	color: white;
+}
+
 /* ==========================================================================
    Buttons - Pill Style with Arrow Animation
    ========================================================================== */
@@ -363,8 +415,13 @@
 
 .button--primary:hover {
 	background-color: var(--color-primary-dark, #153a52);
+	color: white;
 	transform: translateY(-2px);
 	box-shadow: 0 10px 30px rgba(30, 77, 107, 0.3);
+}
+
+.button--primary:hover .button__text {
+	color: white;
 }
 
 /* Accent Button */
@@ -375,8 +432,13 @@
 
 .button--accent:hover {
 	background-color: var(--color-accent-dark, #0a7269);
+	color: white;
 	transform: translateY(-2px);
 	box-shadow: 0 10px 30px rgba(13, 148, 136, 0.3);
+}
+
+.button--accent:hover .button__text {
+	color: white;
 }
 
 /* Secondary/Outline Button */
@@ -1401,6 +1463,25 @@
 	color: var(--color-gray-400, #64748b);
 }
 
+.service-detail__features {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-3, 0.75rem);
+	margin-block-start: var(--spacing-4, 1rem);
+	margin-block-end: var(--spacing-6, 1.5rem);
+}
+
+.service-detail__feature {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-3, 0.75rem);
+}
+
+.service-detail__feature svg {
+	flex-shrink: 0;
+	color: var(--color-accent, #0d9488);
+}
+
 .service-detail__image {
 	border-radius: var(--radius-2xl, 1.5rem);
 	overflow: hidden;
@@ -1531,6 +1612,19 @@
 .contact-info__social-links a:hover {
 	background-color: var(--color-accent, #0d9488);
 	color: white;
+}
+
+/* Contact Image */
+.contact-image {
+	border-radius: var(--radius-2xl, 1.5rem);
+	overflow: hidden;
+}
+
+.contact-image img {
+	inline-size: 100%;
+	block-size: 100%;
+	object-fit: cover;
+	border-radius: var(--radius-2xl, 1.5rem);
 }
 
 /* Contact Form */
@@ -2439,6 +2533,25 @@
 	color: var(--color-gray-400, #64748b);
 }
 
+.service-detail__features {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-3, 0.75rem);
+	margin-block-start: var(--spacing-4, 1rem);
+	margin-block-end: var(--spacing-6, 1.5rem);
+}
+
+.service-detail__feature {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-3, 0.75rem);
+}
+
+.service-detail__feature svg {
+	flex-shrink: 0;
+	color: var(--color-accent, #0d9488);
+}
+
 .service-detail__image {
 	border-radius: var(--radius-2xl, 1.5rem);
 	overflow: hidden;
@@ -2569,6 +2682,19 @@
 .contact-info__social-links a:hover {
 	background-color: var(--color-accent, #0d9488);
 	color: white;
+}
+
+/* Contact Image */
+.contact-image {
+	border-radius: var(--radius-2xl, 1.5rem);
+	overflow: hidden;
+}
+
+.contact-image img {
+	inline-size: 100%;
+	block-size: 100%;
+	object-fit: cover;
+	border-radius: var(--radius-2xl, 1.5rem);
 }
 
 /* Contact Form */

@@ -60,7 +60,7 @@ get_header();
 			</div>
 			<div class="hero__media">
 				<div class="hero__image-wrapper">
-					<img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop" alt="<?php esc_attr_e( 'Healthcare professional providing telehealth consultation', 'wescarhealth' ); ?>" class="hero__image">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-image.png' ); ?>" alt="<?php esc_attr_e( 'Healthcare professional providing telehealth consultation', 'wescarhealth' ); ?>" class="hero__image">
 				</div>
 				<div class="hero__floating-card hero__floating-card--phone">
 					<div class="hero__floating-icon">
@@ -89,7 +89,7 @@ get_header();
 		<div class="container">
 			<div class="about">
 				<div class="about__image-wrapper animate-on-scroll">
-					<img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=700&h=525&fit=crop" alt="<?php esc_attr_e( 'WesCarr Health team providing care', 'wescarhealth' ); ?>" class="about__image">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/about-team.jpg' ); ?>" alt="<?php esc_attr_e( 'WesCarr Health team providing care', 'wescarhealth' ); ?>" class="about__image">
 				</div>
 				<div class="about__content animate-on-scroll" data-delay="200">
 					<span class="section__badge"><?php esc_html_e( 'About Us', 'wescarhealth' ); ?></span>
