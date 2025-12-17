@@ -39,14 +39,18 @@ $booking = function_exists( 'wescarhealth_get' ) ? WescarHealth_Content_Helpers:
 				<p class="hero__description">
 					<?php echo esc_html( $hero['description'] ?? __( 'Expert surgical clearance, hormone therapy, urgent care, and preventive health — all from the comfort of your home.', 'wescarhealth' ) ); ?>
 				</p>
+				<?php
+				$hero_cta_url = ! empty( $hero['cta_url'] ) ? $hero['cta_url'] : $booking;
+				$hero_secondary_url = ! empty( $hero['cta_secondary_url'] ) ? $hero['cta_secondary_url'] : '#services';
+				?>
 				<div class="hero__actions">
-					<a href="<?php echo esc_url( $booking ); ?>" class="button button--primary button--lg" target="_blank" rel="noopener noreferrer">
+					<a href="<?php echo esc_url( $hero_cta_url ); ?>" class="button button--primary button--lg" target="_blank" rel="noopener noreferrer">
 						<span class="button__text"><?php echo esc_html( $hero['cta_text'] ?? __( 'Schedule Your Appointment', 'wescarhealth' ) ); ?></span>
 						<span class="button__arrow">
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
 						</span>
 					</a>
-					<a href="#services" class="button button--secondary">
+					<a href="<?php echo esc_url( $hero_secondary_url ); ?>" class="button button--secondary">
 						<?php echo esc_html( $hero['cta_secondary'] ?? __( 'View Our Services', 'wescarhealth' ) ); ?>
 					</a>
 				</div>
@@ -69,9 +73,12 @@ $booking = function_exists( 'wescarhealth_get' ) ? WescarHealth_Content_Helpers:
 					</div>
 				</div>
 			</div>
+			<?php
+			$hero_image = ! empty( $hero['image'] ) ? $hero['image'] : get_template_directory_uri() . '/assets/images/hero-image.png';
+			?>
 			<div class="hero__media">
 				<div class="hero__image-wrapper">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-image.png' ); ?>" alt="<?php esc_attr_e( 'Healthcare professional providing telehealth consultation', 'wescarhealth' ); ?>" class="hero__image">
+					<img src="<?php echo esc_url( $hero_image ); ?>" alt="<?php esc_attr_e( 'Healthcare professional providing telehealth consultation', 'wescarhealth' ); ?>" class="hero__image">
 				</div>
 				<div class="hero__floating-card hero__floating-card--phone">
 					<div class="hero__floating-icon">
@@ -99,8 +106,11 @@ $booking = function_exists( 'wescarhealth_get' ) ? WescarHealth_Content_Helpers:
 	<section class="section" id="about">
 		<div class="container">
 			<div class="about">
+				<?php
+				$about_image = ! empty( $about['image'] ) ? $about['image'] : get_template_directory_uri() . '/assets/images/about-team.jpg';
+				?>
 				<div class="about__image-wrapper animate-on-scroll">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/about-team.jpg' ); ?>" alt="<?php esc_attr_e( 'WesCarr Health team providing care', 'wescarhealth' ); ?>" class="about__image">
+					<img src="<?php echo esc_url( $about_image ); ?>" alt="<?php esc_attr_e( 'WesCarr Health team providing care', 'wescarhealth' ); ?>" class="about__image">
 				</div>
 				<div class="about__content animate-on-scroll" data-delay="200">
 					<span class="section__badge"><?php echo esc_html( $about['badge'] ?? __( 'About Us', 'wescarhealth' ) ); ?></span>
@@ -128,7 +138,11 @@ $booking = function_exists( 'wescarhealth_get' ) ? WescarHealth_Content_Helpers:
 							<span class="about__list-text"><?php echo esc_html( $about['list_3'] ?? __( 'Compassionate, confidential care', 'wescarhealth' ) ); ?></span>
 						</li>
 					</ul>
-					<a href="<?php echo esc_url( home_url( '/about' ) ); ?>" class="button button--primary">
+					<?php
+					$about_cta_url = ! empty( $about['cta_url'] ) ? $about['cta_url'] : '/about';
+					$about_cta_url = ( strpos( $about_cta_url, 'http' ) === 0 ) ? $about_cta_url : home_url( $about_cta_url );
+					?>
+					<a href="<?php echo esc_url( $about_cta_url ); ?>" class="button button--primary">
 						<span class="button__text"><?php echo esc_html( $about['cta_text'] ?? __( 'Learn More About Us', 'wescarhealth' ) ); ?></span>
 						<span class="button__arrow">
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -345,7 +359,10 @@ $booking = function_exists( 'wescarhealth_get' ) ? WescarHealth_Content_Helpers:
 			<h2 class="cta__title"><?php echo esc_html( $cta['title'] ?? __( 'Ready to Get Started?', 'wescarhealth' ) ); ?></h2>
 			<p class="cta__description"><?php echo esc_html( $cta['description'] ?? __( 'Schedule your telehealth appointment today and experience healthcare on your terms.', 'wescarhealth' ) ); ?></p>
 			<div class="cta__actions">
-				<a href="<?php echo esc_url( $booking ); ?>" class="button button--accent button--lg" target="_blank" rel="noopener noreferrer">
+				<?php
+				$cta_button_url = ! empty( $cta['button_url'] ) ? $cta['button_url'] : $booking;
+				?>
+				<a href="<?php echo esc_url( $cta_button_url ); ?>" class="button button--accent button--lg" target="_blank" rel="noopener noreferrer">
 					<span class="button__text"><?php echo esc_html( $cta['button_text'] ?? __( 'Book Your Appointment', 'wescarhealth' ) ); ?></span>
 					<span class="button__arrow">
 						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>

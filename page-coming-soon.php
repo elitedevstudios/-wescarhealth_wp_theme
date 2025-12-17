@@ -431,9 +431,12 @@ $socials     = function_exists( 'wescarhealth_get' ) ? WescarHealth_Content_Help
 		</div>
 
 		<!-- Media Side -->
+		<?php
+		$coming_soon_image = ! empty( $coming_soon['image'] ) ? $coming_soon['image'] : get_template_directory_uri() . '/assets/images/hero-image.png';
+		?>
 		<div class="coming-soon__media">
 			<div class="coming-soon__image-wrapper">
-				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-image.png' ); ?>" alt="<?php esc_attr_e( 'Healthcare professional ready to help', 'wescarhealth' ); ?>" class="coming-soon__image">
+				<img src="<?php echo esc_url( $coming_soon_image ); ?>" alt="<?php esc_attr_e( 'Healthcare professional ready to help', 'wescarhealth' ); ?>" class="coming-soon__image">
 			</div>
 		</div>
 	</div>
