@@ -1,0 +1,161 @@
+<?php
+/**
+ * Template Name: Telehealth Consent Page
+ * 
+ * Telehealth consent and open payments notice page for WesCar Health
+ *
+ * @package    WescarHealth
+ * @subpackage Templates
+ */
+
+declare(strict_types=1);
+
+get_header();
+?>
+
+<main id="primary" class="site-main">
+
+	<!-- Page Hero -->
+	<section class="page-hero">
+		<div class="container">
+			<div class="page-hero__content">
+				<span class="section__badge"><?php esc_html_e( 'Legal', 'wescarhealth' ); ?></span>
+				<h1 class="page-hero__title"><?php esc_html_e( 'Telehealth Consent', 'wescarhealth' ); ?> <em><?php esc_html_e( '& Open Payments Notice', 'wescarhealth' ); ?></em></h1>
+				<p class="page-hero__description"><?php esc_html_e( 'Informed consent regarding use of telehealth services.', 'wescarhealth' ); ?></p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Consent Content -->
+	<section class="section legal-content">
+		<div class="container container--narrow">
+			
+			<div class="legal-content__meta animate-on-scroll">
+				<p class="legal-content__updated"><?php esc_html_e( 'Effective Date: January 1, 2026', 'wescarhealth' ); ?></p>
+			</div>
+
+			<!-- Agreement Notice -->
+			<div class="legal-content__notice legal-content__notice--warning animate-on-scroll">
+				<p><?php esc_html_e( 'BY CLICKING "I AGREE," CHECKING A RELATED BOX TO SIGNIFY YOUR ACCEPTANCE, USING ANY OTHER ACCEPTANCE PROTOCOL PRESENTED THROUGH THE SERVICE OR OTHERWISE AFFIRMATIVELY ACCEPTING THIS CONSENT, YOU ACKNOWLEDGE THAT YOU HAVE READ, ACCEPTED, AND AGREED TO BE BOUND BY THIS CONSENT. IF YOU DO NOT AGREE TO THIS CONSENT, DO NOT CREATE AN ACCOUNT OR USE THE SERVICE. YOU HEREBY GRANT AGENCY AUTHORITY TO ANY PARTY WHO CLICKS ON THE "I AGREE" BUTTON OR OTHERWISE INDICATES ACCEPTANCE TO THIS CONSENT ON YOUR BEHALF.', 'wescarhealth' ); ?></p>
+			</div>
+
+			<!-- Emergency Notice -->
+			<div class="legal-content__notice legal-content__notice--emergency animate-on-scroll">
+				<p><strong><?php esc_html_e( 'IF YOU ARE EXPERIENCING A LIFE-THREATENING SITUATION SUCH AS CONTEMPLATING SUICIDE, CALL 911 OR THE 988 SUICIDE & CRISIS LIFELINE AT 988.', 'wescarhealth' ); ?></strong></p>
+			</div>
+
+			<!-- Purpose -->
+			<div class="legal-content__section animate-on-scroll">
+				<h2 class="legal-content__heading"><?php esc_html_e( 'Purpose', 'wescarhealth' ); ?></h2>
+				<p><?php esc_html_e( 'The purpose of this consent form ("Consent") is to provide you with information about telehealth and to obtain your informed consent to the use of telehealth in the delivery of healthcare to you by physicians, physician assistants, nurse practitioners ("Providers") using the online platforms owned and operated by WesCar Health and/or its subsidiaries (the "Service"). In this Consent, the terms "you" and "yours" refer to the person using the Service, or in the case of a use of the Service by or on behalf of an individual minor between the ages of thirteen (13) and eighteen (18) or higher age of majority under applicable state law, "you" and "yours" refer to and include (i) the parent or legal guardian who provides consent to the use of the Service by such minor or uses the Service on behalf of such minor, and (ii) the minor for whom consent is being provided or on whose behalf the Service is being utilized.', 'wescarhealth' ); ?></p>
+			</div>
+
+			<!-- Use of Telehealth -->
+			<div class="legal-content__section animate-on-scroll">
+				<h2 class="legal-content__heading"><?php esc_html_e( 'Use of Telehealth', 'wescarhealth' ); ?></h2>
+				<p><?php esc_html_e( 'Telehealth involves the delivery of healthcare using electronic communications, information technology or other means between a healthcare provider and a patient who are not in the same physical location. Telehealth may be used for diagnosis, treatment, follow-up and/or patient education, and may include, but is not limited to, one or more of the following: electronic transmission of medical records, photo images, personal health information or other data between a patient and a provider; interactions between a patient and provider via audio, video and/or data communications (such as messaging or email communications); use of output data from medical devices, sound and video files. Alternative methods of care may be available to you, such as in-person services, and you may choose an alternative at any time. Always discuss alternative options with your Provider.', 'wescarhealth' ); ?></p>
+			</div>
+
+			<!-- Anticipated Benefits -->
+			<div class="legal-content__section animate-on-scroll">
+				<h2 class="legal-content__heading"><?php esc_html_e( 'Anticipated Benefits', 'wescarhealth' ); ?></h2>
+				<p><?php esc_html_e( 'The use of telehealth may have the following possible benefits: making it easier and more efficient for you to access medical care or other services and treatment for the conditions treated by your Provider(s); allowing you to obtain medical care or other services and treatment by Provider(s) at times that are convenient for you; and enabling you to interact with Provider(s) without the necessity of an in-office appointment.', 'wescarhealth' ); ?></p>
+			</div>
+
+			<!-- Potential Risks -->
+			<div class="legal-content__section animate-on-scroll">
+				<h2 class="legal-content__heading"><?php esc_html_e( 'Potential Risks', 'wescarhealth' ); ?></h2>
+				<p><?php esc_html_e( 'There are also potential risks associated with the use of telehealth and other technology. These risks include, but may not be limited to the following: the quality, accuracy or effectiveness of the services you receive from your Provider could be limited; technology, including the Service, may contain bugs or other errors, including ones which may limit functionality, produce erroneous results, render part or all of such technology, including the Service, unavailable or inoperable, produce incorrect records, transmissions, data or content, or cause records, transmissions, data or content to be corrupted or lost; failures of technology may also impact your Provider(s) ability to correctly diagnose or treat your condition; the inability of your Provider(s) to conduct certain tests or assess vital signs in-person may in some cases prevent the Provider(s) from providing a diagnosis or treatment or from identifying the need for emergency medical care or treatment for you; your Provider(s) may not able to provide treatment for your particular condition and you may be required to seek alternative healthcare or emergency care services; delays in medical evaluation/treatment could occur due to unavailability of your Provider(s) or deficiencies or failures of the technology or electronic equipment used; the electronic systems or other security protocols or safeguards used could fail, causing a breach of privacy of your medical or other information; data stored and communicated electronically, for example, through email communications, may be more susceptible to unintended disclosure of protected health information to third parties; given regulatory requirements in certain jurisdictions, your Provider(s) diagnosis and/or treatment options, especially pertaining to certain prescriptions, may be limited; a lack of access to all of your medical records may result in adverse drug interactions or allergic reactions or other judgment errors.', 'wescarhealth' ); ?></p>
+			</div>
+
+			<!-- Life Threatening Situations -->
+			<div class="legal-content__section animate-on-scroll">
+				<h2 class="legal-content__heading"><?php esc_html_e( 'Life Threatening and Other Emergency Situations; Follow-Up Care', 'wescarhealth' ); ?></h2>
+				<p><?php esc_html_e( 'If you are experiencing a life-threatening situation such as contemplating suicide, call 911 or the 988 Suicide and Crisis Lifeline at 988. If the situation is an emergency, call 911. In some situations, telehealth is not an appropriate method of care. If you require immediate or urgent care, you must seek care at an emergency room facility or other provider equipped to deliver urgent or emergent care. Providers may not respond promptly to communications you submit through the Service. If you are not experiencing an emergency or do not require immediate or urgent care, you can communicate with Providers through the secure message service in the Service.', 'wescarhealth' ); ?></p>
+				<p><?php esc_html_e( 'If a technical failure prevents you from communicating with your Providers through the Service, you should contact us directly.', 'wescarhealth' ); ?></p>
+			</div>
+
+			<!-- Data Privacy -->
+			<div class="legal-content__section animate-on-scroll">
+				<h2 class="legal-content__heading"><?php esc_html_e( 'Data Privacy and Protection', 'wescarhealth' ); ?></h2>
+				<p><?php esc_html_e( 'The electronic systems used in the Service will incorporate network and software security protocols to protect the privacy and security of your information and will include measures to safeguard data against intentional or unintentional corruption. Personal information that identifies you or contains protected health information will not be disclosed to any third party without your consent, except as authorized by law for the purposes of consultation, treatment, payment/billing, certain administrative purposes, and as required by law to disclose to other persons and agencies certain information obtained during the provision of mental health services (e.g., danger to self or others; mandatory reporting of child, elder, or vulnerable adult abuse) or as otherwise set forth in your Provider\'s Notice of Privacy Practices.', 'wescarhealth' ); ?></p>
+				<p><?php esc_html_e( 'Use of the Service may include email communications to and from you that may include your protected health information. You understand that WesCar Health does not and cannot guarantee the security or privacy of the services you use to receive communications, including for example your email service provider.', 'wescarhealth' ); ?></p>
+			</div>
+
+			<!-- Laboratory Products -->
+			<div class="legal-content__section animate-on-scroll">
+				<h2 class="legal-content__heading"><?php esc_html_e( 'Laboratory Products and Services', 'wescarhealth' ); ?></h2>
+				<p><?php esc_html_e( 'Certain healthcare services provided to you by Providers via the Service may require that you complete an at-home diagnostic test. These diagnostic tests are provided by third-party laboratories, and neither WesCar Health and its subsidiaries, nor your Provider(s) can guarantee the accuracy or reliability of these tests.', 'wescarhealth' ); ?></p>
+				<p><?php esc_html_e( 'These laboratory tests can provide false negative, false positive, or inconclusive results that could impact your Provider(s) ability to correctly diagnose or treat your medical conditions. A failure or defect of these tests could also impact your Provider(s) ability to correctly diagnose or treat your medical conditions.', 'wescarhealth' ); ?></p>
+			</div>
+
+			<!-- Open Payments Notice -->
+			<div class="legal-content__section animate-on-scroll">
+				<h2 class="legal-content__heading"><?php esc_html_e( 'Open Payments Notice', 'wescarhealth' ); ?></h2>
+				<p><?php esc_html_e( 'For informational purposes only, a link to the federal Centers for Medicare and Medicaid Services Open Payments web page is provided here.', 'wescarhealth' ); ?></p>
+				<p><?php esc_html_e( 'The federal Physician Payments Sunshine Act requires that detailed information about payment and other payments of value worth over ten dollars ($10) from manufacturers of drugs, medical device, and biologics to physicians and teaching hospitals be made available to the public.', 'wescarhealth' ); ?></p>
+				<p><?php esc_html_e( 'The Open Payments database is a federal tool used to search payments made by drug and device companies to physicians and teaching hospitals. It can be found at', 'wescarhealth' ); ?> <a href="https://openpaymentsdata.cms.gov" target="_blank" rel="noopener noreferrer">https://openpaymentsdata.cms.gov</a></p>
+			</div>
+
+			<!-- Your Acknowledgments -->
+			<div class="legal-content__section animate-on-scroll">
+				<h2 class="legal-content__heading"><?php esc_html_e( 'Your Acknowledgments', 'wescarhealth' ); ?></h2>
+				<p><?php esc_html_e( 'By clicking "I Agree", checking a related box to signify your acceptance, using any other acceptance protocol presented through the Service or otherwise affirmatively accepting this consent, you are agreeing and providing your consent with respect to the following:', 'wescarhealth' ); ?></p>
+				
+				<ul class="legal-content__list">
+					<li><?php esc_html_e( 'Healthcare services provided to you by Providers via the Service will be provided by telehealth. In some cases, your treating Provider may be a nurse practitioner or physician assistant and not a physician, and you agree to be treated by non-physician providers, if applicable, by using the Service.', 'wescarhealth' ); ?></li>
+					<li><?php esc_html_e( 'Technology used to deliver care, including the Service, may contain bugs or other errors, including ones which may limit functionality, produce erroneous results, render part or all of such technology unavailable or inoperable, produce incorrect records, transmissions, data or content, or cause records, transmissions, data or content to be corrupted or lost, any or all of which could limit or otherwise impact the quality, accuracy and/or effectiveness of the medical care or other services that you receive from your Provider(s).', 'wescarhealth' ); ?></li>
+					<li><?php esc_html_e( 'Certain diagnostic testing services, including laboratory products and services offered through the Service, may contain defects, including ones which may limit functionality or produce erroneous results, any or all of which could limit or otherwise impact the quality, accuracy and/or effectiveness of the medical care or other services that you receive from your Provider(s).', 'wescarhealth' ); ?></li>
+					<li><?php esc_html_e( 'The delivery of healthcare services via telehealth is an evolving field and the use of telehealth or other technology in your medical care and treatment from Provider(s) may include uses of technology different from those described in this Consent or not specifically described in this Consent.', 'wescarhealth' ); ?></li>
+					<li><?php esc_html_e( 'No potential benefits from the use of telehealth or other technology or specific results can be guaranteed, including any laboratory testing results or related diagnosis or treatment by your Provider(s).', 'wescarhealth' ); ?></li>
+					<li><?php esc_html_e( 'Your condition may not be cured or improved, and in some cases, may get worse.', 'wescarhealth' ); ?></li>
+					<li><?php esc_html_e( 'There are limitations in the provision of medical care or other services and treatment via telehealth and technology, including the Service, and you may not be able to receive diagnosis and/or treatment through telehealth for every condition for which you seek diagnosis and/or treatment.', 'wescarhealth' ); ?></li>
+					<li><?php esc_html_e( 'There are potential risks to the use of telehealth and other technology, including but not limited to the risks described in this Consent. You have the opportunity to discuss the use of telehealth, including the Service, with your Provider(s), including the benefits and risks of such use and the alternatives to the use of telehealth.', 'wescarhealth' ); ?></li>
+					<li><?php esc_html_e( 'You understand that there will be no recording of any online treatment sessions by your Provider(s) or you.', 'wescarhealth' ); ?></li>
+					<li><?php esc_html_e( 'Your Provider(s) will assess your medical condition and, in their sole discretion, may determine it is medically appropriate to diagnose and/or treat your condition via telehealth and whether you maintain sufficient knowledge and skills in the use of technology appropriate to diagnosing and/or treating your condition via telehealth.', 'wescarhealth' ); ?></li>
+					<li><?php esc_html_e( 'By continuing to use the Service, you concur with your Provider\'s medical assessment and agree to receive a diagnosis and/or treatment via telehealth technology. You have the right to withdraw your consent to the use of telehealth in the course of your care, without prejudice to any future care or treatment and without risking the loss or withdrawal of any health benefits to which your entitled, but you understand that the Providers who utilize the Service do not offer in-person treatment.', 'wescarhealth' ); ?></li>
+					<li><?php esc_html_e( 'Any withdrawal of your consent will be effective upon receipt of written notice to your Providers, except that such withdrawal will not have any effect on any action taken by WesCar Health or your Provider(s) in reliance on this Consent before it received your written notice of withdrawal.', 'wescarhealth' ); ?></li>
+					<li><?php esc_html_e( 'Any withdrawal of your consent will not affect any other provision of this Consent, and you will continue to be bound by this Consent.', 'wescarhealth' ); ?></li>
+					<li><?php esc_html_e( 'You understand that the use of the Service involves electronic communication to and from you of your personal medical information in connection with the provision of telehealth services, including through email. You understand that it is your duty to provide WesCar Health and your Provider(s) truthful, accurate and complete information, including all relevant information regarding care that you may have received or may be receiving from healthcare and/or mental health providers including emergency contact information for your local healthcare and/or mental health providers.', 'wescarhealth' ); ?></li>
+					<li><?php esc_html_e( 'You understand that each of your Provider(s) will assess your medical condition and, in their sole discretion, may determine it is medically appropriate to diagnose and/or treat your condition using telehealth technology, including the Service.', 'wescarhealth' ); ?></li>
+					<li><?php esc_html_e( 'By continuing to use the Service, you concur with your Provider\'s medical assessment and agree to receive a diagnosis and/or treatment via telehealth technology.', 'wescarhealth' ); ?></li>
+					<li><?php esc_html_e( 'You understand that each of your Provider(s) may determine in their sole discretion that your condition is not suitable for diagnosis and/or treatment using telehealth technology, including the Service, and that you may need to seek care and treatment from a specialist or other healthcare or mental health provider, outside of such telehealth technology.', 'wescarhealth' ); ?></li>
+					<li><?php esc_html_e( 'WesCar Health has commercial relationships with various pharmacies. WesCar Health has a financial relationship with the entity that employs or contracts with your Provider.', 'wescarhealth' ); ?></li>
+					<li><?php esc_html_e( 'You are free to obtain your medical examination from another healthcare provider that is not associated with WesCar Health.', 'wescarhealth' ); ?></li>
+					<li><?php esc_html_e( 'WesCar Health will use its pharmacy partners to fulfill your order directly to your door. You are free to obtain your prescription from any pharmacy of your choice by contacting our support team.', 'wescarhealth' ); ?></li>
+					<li><?php esc_html_e( 'Prescriptions may be filled by and transferred between any pharmacy partners on your behalf.', 'wescarhealth' ); ?></li>
+					<li><?php esc_html_e( 'You must pay the full amount of the costs associated with use of the Service, including any prescription you may receive, and you will not attempt to submit a claim to Medicare, any other federal payor, or any state or private insurer.', 'wescarhealth' ); ?></li>
+					<li><?php esc_html_e( 'If you have a concern about a medical professional, you may contact the Medical Board in your state regarding your concerns.', 'wescarhealth' ); ?></li>
+				</ul>
+			</div>
+
+			<!-- California Notice -->
+			<div class="legal-content__section legal-content__section--highlight animate-on-scroll">
+				<h3 class="legal-content__subheading"><?php esc_html_e( 'Special Notice to California Clients', 'wescarhealth' ); ?></h3>
+				<p><?php esc_html_e( 'Physicians and midwives are licensed and regulated by the Medical Board of California. To confirm a license or file a complaint, go to', 'wescarhealth' ); ?> <a href="https://www.mbc.ca.gov" target="_blank" rel="noopener noreferrer">www.mbc.ca.gov</a> <?php esc_html_e( 'or call (800) 633-2322.', 'wescarhealth' ); ?></p>
+			</div>
+
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="cta">
+		<div class="cta__container">
+			<h2 class="cta__title"><?php esc_html_e( 'Have Questions?', 'wescarhealth' ); ?></h2>
+			<p class="cta__description"><?php esc_html_e( 'If you have any questions about this consent or our telehealth services, please contact us.', 'wescarhealth' ); ?></p>
+			<div class="cta__actions">
+				<a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="button button--accent button--lg">
+					<span class="button__text"><?php esc_html_e( 'Contact Us', 'wescarhealth' ); ?></span>
+					<span class="button__arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+				</a>
+				<a href="<?php echo esc_url( home_url( '/faq' ) ); ?>" class="button button--outline-light">
+					<?php esc_html_e( 'View FAQs', 'wescarhealth' ); ?>
+				</a>
+			</div>
+		</div>
+	</section>
+
+</main>
+
+<?php
+get_footer();

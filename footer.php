@@ -34,15 +34,14 @@ declare(strict_types=1);
 				</div>
 			</div>
 
-			<!-- Quick Links -->
+			<!-- Details -->
 			<div class="site-footer__nav-column">
-				<h3 class="site-footer__nav-title"><?php esc_html_e( 'Quick Links', 'wescarhealth' ); ?></h3>
+				<h3 class="site-footer__nav-title"><?php esc_html_e( 'Details', 'wescarhealth' ); ?></h3>
 				<ul class="site-footer__nav-list">
-					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'wescarhealth' ); ?></a></li>
-					<li><a href="<?php echo esc_url( home_url( '/about' ) ); ?>"><?php esc_html_e( 'About Us', 'wescarhealth' ); ?></a></li>
-					<li><a href="<?php echo esc_url( home_url( '/services' ) ); ?>"><?php esc_html_e( 'Services', 'wescarhealth' ); ?></a></li>
-					<li><a href="<?php echo esc_url( home_url( '/faq' ) ); ?>"><?php esc_html_e( 'FAQs', 'wescarhealth' ); ?></a></li>
-					<li><a href="<?php echo esc_url( home_url( '/contact' ) ); ?>"><?php esc_html_e( 'Contact', 'wescarhealth' ); ?></a></li>
+					<li><a href="<?php echo esc_url( home_url( '/telehealth-consent' ) ); ?>"><?php esc_html_e( 'Telehealth Consent', 'wescarhealth' ); ?></a></li>
+					<li><a href="<?php echo esc_url( home_url( '/privacy-policy' ) ); ?>"><?php esc_html_e( 'Privacy Policy', 'wescarhealth' ); ?></a></li>
+					<li><a href="<?php echo esc_url( home_url( '/terms-and-conditions' ) ); ?>"><?php esc_html_e( 'Terms and Conditions', 'wescarhealth' ); ?></a></li>
+					<li><a href="<?php echo esc_url( home_url( '/cancellation-policy' ) ); ?>"><?php esc_html_e( 'Cancellation Policy', 'wescarhealth' ); ?></a></li>
 				</ul>
 			</div>
 
@@ -94,7 +93,7 @@ declare(strict_types=1);
 			</div>
 			<div class="site-footer__legal">
 				<a href="<?php echo esc_url( home_url( '/privacy-policy' ) ); ?>"><?php esc_html_e( 'Privacy Policy', 'wescarhealth' ); ?></a>
-				<a href="<?php echo esc_url( home_url( '/terms-of-service' ) ); ?>"><?php esc_html_e( 'Terms of Service', 'wescarhealth' ); ?></a>
+				<a href="<?php echo esc_url( home_url( '/terms-and-conditions' ) ); ?>"><?php esc_html_e( 'Terms and Conditions', 'wescarhealth' ); ?></a>
 			</div>
 		</div>
 	</div>

@@ -303,7 +303,7 @@ get_header();
 					</div>
 					<div class="feature-card__content">
 						<h3 class="feature-card__title"><?php esc_html_e( 'Expert Providers', 'wescarhealth' ); ?></h3>
-						<p class="feature-card__description"><?php esc_html_e( 'Led by board-certified nurse clinicians with decades of frontline experience.', 'wescarhealth' ); ?></p>
+						<p class="feature-card__description"><?php esc_html_e( 'Led by board-certified clinicians with decades of frontline experience.', 'wescarhealth' ); ?></p>
 					</div>
 				</div>
 				<div class="feature-card animate-on-scroll" data-delay="400">
