@@ -91,6 +91,7 @@ $wescarhealth_includes = [
 	'/inc/template-hooks.php',  // Action/filter hooks.
 	'/inc/block-patterns.php',  // Block patterns.
 	'/inc/customizer.php',      // Customizer settings.
+	'/inc/plugin-activation.php', // Bundled plugin activation.
 ];
 
 foreach ( $wescarhealth_includes as $file ) {
