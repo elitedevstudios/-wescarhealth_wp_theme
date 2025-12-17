@@ -8,6 +8,10 @@
 
 declare(strict_types=1);
 
+// Get content from plugin if available.
+$header_booking = function_exists( 'wescarhealth_get' ) ? WescarHealth_Content_Helpers::get_booking_url() : 'https://www.tebra.com/';
+$header_phone   = function_exists( 'wescarhealth_get' ) ? WescarHealth_Content_Helpers::get_phone() : '(888) 456-7890';
+$header_phone_link = function_exists( 'wescarhealth_get' ) ? WescarHealth_Content_Helpers::get_phone_link() : '+18884567890';
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -61,19 +65,16 @@ declare(strict_types=1);
 			</nav>
 
 			<div class="site-header__actions">
-				<?php
-				$phone = get_theme_mod( 'wescarhealth_phone', '(888) 456-7890' );
-				if ( $phone ) :
-					?>
-					<a href="tel:<?php echo esc_attr( preg_replace( '/[^0-9+]/', '', $phone ) ); ?>" class="site-header__phone">
+				<?php if ( $header_phone ) : ?>
+					<a href="tel:<?php echo esc_attr( $header_phone_link ); ?>" class="site-header__phone">
 						<span class="site-header__phone-icon">
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
 						</span>
-						<span><?php echo esc_html( $phone ); ?></span>
+						<span><?php echo esc_html( $header_phone ); ?></span>
 					</a>
 				<?php endif; ?>
 
-				<a href="https://www.tebra.com/" class="button button--primary" target="_blank" rel="noopener noreferrer">
+				<a href="<?php echo esc_url( $header_booking ); ?>" class="button button--primary" target="_blank" rel="noopener noreferrer">
 					<span class="button__text"><?php esc_html_e( 'Book Now', 'wescarhealth' ); ?></span>
 					<span class="button__arrow">
 						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -117,7 +118,7 @@ declare(strict_types=1);
 			);
 			?>
 			<div class="site-header__mobile-cta">
-				<a href="https://www.tebra.com/" class="button button--primary button--lg" target="_blank" rel="noopener noreferrer">
+				<a href="<?php echo esc_url( $header_booking ); ?>" class="button button--primary button--lg" target="_blank" rel="noopener noreferrer">
 					<?php esc_html_e( 'Book Appointment', 'wescarhealth' ); ?>
 				</a>
 			</div>

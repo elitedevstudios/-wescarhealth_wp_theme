@@ -11,6 +11,9 @@
 declare(strict_types=1);
 
 get_header();
+
+// Get content from plugin if available.
+$booking = function_exists( 'wescarhealth_get' ) ? WescarHealth_Content_Helpers::get_booking_url() : 'https://www.tebra.com/';
 ?>
 
 <main id="primary" class="site-main">
@@ -76,7 +79,7 @@ get_header();
 						</div>
 					</div>
 
-					<a href="https://www.tebra.com/" class="button button--primary" target="_blank" rel="noopener noreferrer">
+					<a href="<?php echo esc_url( $booking ); ?>" class="button button--primary" target="_blank" rel="noopener noreferrer">
 						<span class="button__text"><?php esc_html_e( 'Schedule Clearance', 'wescarhealth' ); ?></span>
 						<span class="button__arrow">
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -122,7 +125,7 @@ get_header();
 						</ul>
 					</div>
 
-					<a href="https://www.tebra.com/" class="button button--primary" target="_blank" rel="noopener noreferrer">
+					<a href="<?php echo esc_url( $booking ); ?>" class="button button--primary" target="_blank" rel="noopener noreferrer">
 						<span class="button__text"><?php esc_html_e( 'Schedule Consultation', 'wescarhealth' ); ?></span>
 						<span class="button__arrow">
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -168,7 +171,7 @@ get_header();
 						</ul>
 					</div>
 
-					<a href="https://www.tebra.com/" class="button button--primary" target="_blank" rel="noopener noreferrer">
+					<a href="<?php echo esc_url( $booking ); ?>" class="button button--primary" target="_blank" rel="noopener noreferrer">
 						<span class="button__text"><?php esc_html_e( 'Get Care Now', 'wescarhealth' ); ?></span>
 						<span class="button__arrow">
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -214,7 +217,7 @@ get_header();
 						</ul>
 					</div>
 
-					<a href="https://www.tebra.com/" class="button button--primary" target="_blank" rel="noopener noreferrer">
+					<a href="<?php echo esc_url( $booking ); ?>" class="button button--primary" target="_blank" rel="noopener noreferrer">
 						<span class="button__text"><?php esc_html_e( 'Schedule Consultation', 'wescarhealth' ); ?></span>
 						<span class="button__arrow">
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -234,7 +237,7 @@ get_header();
 			<h2 class="cta__title"><?php esc_html_e( 'Ready to Get Started?', 'wescarhealth' ); ?></h2>
 			<p class="cta__description"><?php esc_html_e( 'Book your telehealth appointment today and experience healthcare on your terms.', 'wescarhealth' ); ?></p>
 			<div class="cta__actions">
-				<a href="https://www.tebra.com/" class="button button--accent button--lg" target="_blank" rel="noopener noreferrer">
+				<a href="<?php echo esc_url( $booking ); ?>" class="button button--accent button--lg" target="_blank" rel="noopener noreferrer">
 					<span class="button__text"><?php esc_html_e( 'Book Your Appointment', 'wescarhealth' ); ?></span>
 					<span class="button__arrow">
 						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
