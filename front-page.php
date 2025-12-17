@@ -9,6 +9,17 @@
 declare(strict_types=1);
 
 get_header();
+
+// Get content from plugin if available.
+$hero    = function_exists( 'wescarhealth_get' ) ? WescarHealth_Content_Helpers::get_hero() : array();
+$about   = function_exists( 'wescarhealth_get' ) ? WescarHealth_Content_Helpers::get_about() : array();
+$stats   = function_exists( 'wescarhealth_get' ) ? WescarHealth_Content_Helpers::get_stats() : array();
+$cta     = function_exists( 'wescarhealth_get' ) ? WescarHealth_Content_Helpers::get_cta() : array();
+$trust   = function_exists( 'wescarhealth_get' ) ? WescarHealth_Content_Helpers::get_trust() : array();
+$phone   = function_exists( 'wescarhealth_get' ) ? WescarHealth_Content_Helpers::get_phone() : '(888) 456-7890';
+$email   = function_exists( 'wescarhealth_get' ) ? WescarHealth_Content_Helpers::get_email() : 'info@wescarrhealth.com';
+$hours   = function_exists( 'wescarhealth_get' ) ? WescarHealth_Content_Helpers::get_hours( true ) : '6am - Midnight';
+$booking = function_exists( 'wescarhealth_get' ) ? WescarHealth_Content_Helpers::get_booking_url() : 'https://www.tebra.com/';
 ?>
 
 <main id="primary" class="site-main">
@@ -18,25 +29,25 @@ get_header();
 		<div class="hero__container">
 			<div class="hero__content">
 				<span class="hero__badge">
-					<?php esc_html_e( 'Telehealth Made Simple', 'wescarhealth' ); ?>
+					<?php echo esc_html( $hero['badge'] ?? __( 'Telehealth Made Simple', 'wescarhealth' ) ); ?>
 				</span>
 				<h1 class="hero__title">
-					<?php esc_html_e( 'Your Trusted Partner in', 'wescarhealth' ); ?>
-					<em><?php esc_html_e( 'Modern Telehealth', 'wescarhealth' ); ?></em>
-					<?php esc_html_e( 'Care', 'wescarhealth' ); ?>
+					<?php echo esc_html( $hero['title_1'] ?? __( 'Your Trusted Partner in', 'wescarhealth' ) ); ?>
+					<em><?php echo esc_html( $hero['title_em'] ?? __( 'Modern Telehealth', 'wescarhealth' ) ); ?></em>
+					<?php echo esc_html( $hero['title_2'] ?? __( 'Care', 'wescarhealth' ) ); ?>
 				</h1>
 				<p class="hero__description">
-					<?php esc_html_e( 'Expert surgical clearance, hormone therapy, urgent care, and preventive health — all from the comfort of your home.', 'wescarhealth' ); ?>
+					<?php echo esc_html( $hero['description'] ?? __( 'Expert surgical clearance, hormone therapy, urgent care, and preventive health — all from the comfort of your home.', 'wescarhealth' ) ); ?>
 				</p>
 				<div class="hero__actions">
-					<a href="https://www.tebra.com/" class="button button--primary button--lg" target="_blank" rel="noopener noreferrer">
-						<span class="button__text"><?php esc_html_e( 'Schedule Your Appointment', 'wescarhealth' ); ?></span>
+					<a href="<?php echo esc_url( $booking ); ?>" class="button button--primary button--lg" target="_blank" rel="noopener noreferrer">
+						<span class="button__text"><?php echo esc_html( $hero['cta_text'] ?? __( 'Schedule Your Appointment', 'wescarhealth' ) ); ?></span>
 						<span class="button__arrow">
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
 						</span>
 					</a>
 					<a href="#services" class="button button--secondary">
-						<?php esc_html_e( 'View Our Services', 'wescarhealth' ); ?>
+						<?php echo esc_html( $hero['cta_secondary'] ?? __( 'View Our Services', 'wescarhealth' ) ); ?>
 					</a>
 				</div>
 				<div class="hero__trust">
@@ -54,7 +65,7 @@ get_header();
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
 							<span>5.0</span>
 						</div>
-						<span class="hero__trust-text"><?php esc_html_e( 'Trusted by', 'wescarhealth' ); ?> <strong><?php esc_html_e( '500+ patients', 'wescarhealth' ); ?></strong></span>
+						<span class="hero__trust-text"><?php echo esc_html( $trust['text'] ?? __( 'Trusted by', 'wescarhealth' ) ); ?> <strong><?php echo esc_html( $trust['count'] ?? __( '500+ patients', 'wescarhealth' ) ); ?></strong></span>
 					</div>
 				</div>
 			</div>
@@ -68,7 +79,7 @@ get_header();
 					</div>
 					<div class="hero__floating-content">
 						<span class="hero__floating-label"><?php esc_html_e( 'Call Us', 'wescarhealth' ); ?></span>
-						<span class="hero__floating-value">(888) 456-7890</span>
+						<span class="hero__floating-value"><?php echo esc_html( $phone ); ?></span>
 					</div>
 				</div>
 				<div class="hero__floating-card hero__floating-card--hours">
@@ -77,7 +88,7 @@ get_header();
 					</div>
 					<div class="hero__floating-content">
 						<span class="hero__floating-label"><?php esc_html_e( 'Available', 'wescarhealth' ); ?></span>
-						<span class="hero__floating-value"><?php esc_html_e( '6am - Midnight', 'wescarhealth' ); ?></span>
+						<span class="hero__floating-value"><?php echo esc_html( $hours ); ?></span>
 					</div>
 				</div>
 			</div>
@@ -92,33 +103,33 @@ get_header();
 					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/about-team.jpg' ); ?>" alt="<?php esc_attr_e( 'WesCarr Health team providing care', 'wescarhealth' ); ?>" class="about__image">
 				</div>
 				<div class="about__content animate-on-scroll" data-delay="200">
-					<span class="section__badge"><?php esc_html_e( 'About Us', 'wescarhealth' ); ?></span>
-					<h2 class="about__title"><?php esc_html_e( 'Delivering Medical Excellence With A Personal Touch', 'wescarhealth' ); ?></h2>
+					<span class="section__badge"><?php echo esc_html( $about['badge'] ?? __( 'About Us', 'wescarhealth' ) ); ?></span>
+					<h2 class="about__title"><?php echo esc_html( $about['title'] ?? __( 'Delivering Medical Excellence With A Personal Touch', 'wescarhealth' ) ); ?></h2>
 					<p class="about__description">
-						<?php esc_html_e( 'WesCarr Health Hub is a veteran-led, board-certified telehealth practice dedicated to making healthcare accessible, reliable, and patient-centered. Our providers bring decades of combined experience in clinical practice, surgical support, and wellness care.', 'wescarhealth' ); ?>
+						<?php echo esc_html( $about['description'] ?? __( 'WesCarr Health Hub is a veteran-led, board-certified telehealth practice dedicated to making healthcare accessible, reliable, and patient-centered. Our providers bring decades of combined experience in clinical practice, surgical support, and wellness care.', 'wescarhealth' ) ); ?>
 					</p>
 					<ul class="about__list">
 						<li class="about__list-item">
 							<span class="about__list-icon">
 								<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
 							</span>
-							<span class="about__list-text"><?php esc_html_e( 'Seamless online scheduling', 'wescarhealth' ); ?></span>
+							<span class="about__list-text"><?php echo esc_html( $about['list_1'] ?? __( 'Seamless online scheduling', 'wescarhealth' ) ); ?></span>
 						</li>
 						<li class="about__list-item">
 							<span class="about__list-icon">
 								<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
 							</span>
-							<span class="about__list-text"><?php esc_html_e( 'Same-day surgical clearance turnaround', 'wescarhealth' ); ?></span>
+							<span class="about__list-text"><?php echo esc_html( $about['list_2'] ?? __( 'Same-day surgical clearance turnaround', 'wescarhealth' ) ); ?></span>
 						</li>
 						<li class="about__list-item">
 							<span class="about__list-icon">
 								<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
 							</span>
-							<span class="about__list-text"><?php esc_html_e( 'Compassionate, confidential care', 'wescarhealth' ); ?></span>
+							<span class="about__list-text"><?php echo esc_html( $about['list_3'] ?? __( 'Compassionate, confidential care', 'wescarhealth' ) ); ?></span>
 						</li>
 					</ul>
 					<a href="<?php echo esc_url( home_url( '/about' ) ); ?>" class="button button--primary">
-						<span class="button__text"><?php esc_html_e( 'Learn More About Us', 'wescarhealth' ); ?></span>
+						<span class="button__text"><?php echo esc_html( $about['cta_text'] ?? __( 'Learn More About Us', 'wescarhealth' ) ); ?></span>
 						<span class="button__arrow">
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
 						</span>
@@ -251,22 +262,18 @@ get_header();
 				<h2 class="section__title"><?php esc_html_e( 'Trusted Care, Proven Results', 'wescarhealth' ); ?></h2>
 			</div>
 			<div class="stats">
-				<div class="stat animate-on-scroll" data-delay="100">
-					<div class="stat__number" data-counter="500" data-suffix="+">0</div>
-					<div class="stat__label"><?php esc_html_e( 'Patients Served', 'wescarhealth' ); ?></div>
+				<?php
+				$delay = 100;
+				foreach ( $stats as $stat ) :
+				?>
+				<div class="stat animate-on-scroll" data-delay="<?php echo esc_attr( $delay ); ?>">
+					<div class="stat__number" data-counter="<?php echo esc_attr( $stat['number'] ); ?>" data-suffix="<?php echo esc_attr( $stat['suffix'] ); ?>">0</div>
+					<div class="stat__label"><?php echo esc_html( $stat['label'] ); ?></div>
 				</div>
-				<div class="stat animate-on-scroll" data-delay="200">
-					<div class="stat__number" data-counter="98" data-suffix="%">0</div>
-					<div class="stat__label"><?php esc_html_e( 'Satisfaction Rate', 'wescarhealth' ); ?></div>
-				</div>
-				<div class="stat animate-on-scroll" data-delay="300">
-					<div class="stat__number" data-counter="24" data-suffix="/7">0</div>
-					<div class="stat__label"><?php esc_html_e( 'Availability', 'wescarhealth' ); ?></div>
-				</div>
-				<div class="stat animate-on-scroll" data-delay="400">
-					<div class="stat__number" data-counter="15" data-suffix="+">0</div>
-					<div class="stat__label"><?php esc_html_e( 'Years Experience', 'wescarhealth' ); ?></div>
-				</div>
+				<?php
+				$delay += 100;
+				endforeach;
+				?>
 			</div>
 		</div>
 	</section>
@@ -335,11 +342,11 @@ get_header();
 	<!-- CTA Section -->
 	<section class="cta">
 		<div class="cta__container">
-			<h2 class="cta__title"><?php esc_html_e( 'Ready to Get Started?', 'wescarhealth' ); ?></h2>
-			<p class="cta__description"><?php esc_html_e( 'Schedule your telehealth appointment today and experience healthcare on your terms.', 'wescarhealth' ); ?></p>
+			<h2 class="cta__title"><?php echo esc_html( $cta['title'] ?? __( 'Ready to Get Started?', 'wescarhealth' ) ); ?></h2>
+			<p class="cta__description"><?php echo esc_html( $cta['description'] ?? __( 'Schedule your telehealth appointment today and experience healthcare on your terms.', 'wescarhealth' ) ); ?></p>
 			<div class="cta__actions">
-				<a href="https://www.tebra.com/" class="button button--accent button--lg" target="_blank" rel="noopener noreferrer">
-					<span class="button__text"><?php esc_html_e( 'Book Your Appointment', 'wescarhealth' ); ?></span>
+				<a href="<?php echo esc_url( $booking ); ?>" class="button button--accent button--lg" target="_blank" rel="noopener noreferrer">
+					<span class="button__text"><?php echo esc_html( $cta['button_text'] ?? __( 'Book Your Appointment', 'wescarhealth' ) ); ?></span>
 					<span class="button__arrow">
 						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
 					</span>
@@ -352,7 +359,7 @@ get_header();
 					</div>
 					<div class="cta__contact-text">
 						<span class="cta__contact-label"><?php esc_html_e( 'Phone', 'wescarhealth' ); ?></span>
-						<span class="cta__contact-value">(888) 456-7890</span>
+						<span class="cta__contact-value"><?php echo esc_html( $phone ); ?></span>
 					</div>
 				</div>
 				<div class="cta__contact-item">
@@ -361,7 +368,7 @@ get_header();
 					</div>
 					<div class="cta__contact-text">
 						<span class="cta__contact-label"><?php esc_html_e( 'Email', 'wescarhealth' ); ?></span>
-						<span class="cta__contact-value">info@wescarrhealth.com</span>
+						<span class="cta__contact-value"><?php echo esc_html( $email ); ?></span>
 					</div>
 				</div>
 				<div class="cta__contact-item">
@@ -370,7 +377,7 @@ get_header();
 					</div>
 					<div class="cta__contact-text">
 						<span class="cta__contact-label"><?php esc_html_e( 'Hours', 'wescarhealth' ); ?></span>
-						<span class="cta__contact-value"><?php esc_html_e( '6am - Midnight', 'wescarhealth' ); ?></span>
+						<span class="cta__contact-value"><?php echo esc_html( $hours ); ?></span>
 					</div>
 				</div>
 			</div>
